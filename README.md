@@ -293,3 +293,59 @@ Seperti aktivitas, **service** memiliki metode callback daur hidup yang bisa And
 
 **Gambar 1. Daur hidup layanan.** Diagram di sebelah kiri menampilkan daur hidup bila layanan dibuat dengan `startService()` dan diagram di sebelah kanan menampilkan daur hidup bila layanan dibuat dengan `bindService()`. 
 
+# PRAKTIKUM 7: KONSUMSI REST API
+
+## Apa itu API?
+API adalah singkatan dari Application Programming Interface, yaitu sebuah software yang memungkinkan para developer untuk mengintegrasikan dan mengizinkan dua aplikasi yang berbeda secara bersamaan untuk saling terhubung satu sama lain.
+
+Tujuan penggunaan dari API adalah untuk saling berbagi data antar aplikasi yang berbeda tersebut. Tujuan penggunaan API lainnya yaitu untuk mempercepat proses pengembangan aplikasi dengan menyediakan sebuah function yang terpisah sehingga para developer tidak perlu lagi membuat fitur yang serupa.
+
+Istilah “API” sebenarnya tidak ada hubungannya dengan hal-hal yang berkaitan dengan web, karena istilah tersebut sudah ada sebelum web. Hal ini semacam dikooptasi yang berarti “pemanggilan web service”. Tapi secara tradisional, pengertian API lebih berkaitan dengan fungsi-fungsi yang disediakan oleh Sistem Operasi.
+
+## Apa itu REST API?
+REST, atau Representational State Transfer, adalah API yang mengikuti seperangkat aturan untuk aplikasi dan layanan agar dapat berkomunikasi satu sama lain.
+
+REST API bekerja dengan mengajukan permintaan untuk sumber daya dan mengembalikan semua informasi yang relevan tentang sumber daya tersebut, diterjemahkan ke dalam format yang dapat dengan mudah ditafsirkan oleh klien. Klien juga dapat memodifikasi item di server dan bahkan menambahkan item baru ke server melalui REST API.
+
+## Apa itu RESTful API?
+RESTful API adalah Application Programming Interface (API) yang mematuhi batasan arsitektur REST dan berinteraksi dengan layanan web RESTful. RESTful API juga mengikuti prinsip REST API.
+
+RESTful API lebih skalabel dan memiliki masa pakai yang lebih lama. RESTful API menggunakan permintaan HTTP untuk mengakses dan menggunakan data. Ada beberapa permintaan HTTP dasar yang dapat dibuat klien, yaitu:
+
+- **GET** — Untuk mengambil sumber daya.
+- **POST** — Untuk membuat sumber daya baru.
+- **PUT** — Untuk mengedit atau memperbarui sumber daya yang ada.
+- **DELETE** — Untuk menghapus sumber daya.
+- **OPTION** — Untuk mendapatkan operasi yang didukung oleh resource pada REST server.
+
+## Endpoint REST API dan RESTful API
+Saat pengguna membuat respons, API mengirim informasi ‘request’ dari aplikasi web atau server web, dan ia akan menerima ‘response’. Lokasi tempat API mengirim request atau tempat sumber daya berada disebut endpoint. Dalam REST API, endpoint adalah salah satu ujung saluran komunikasi.
+
+## Kenapa Kamu Harus Menggunakan API
+Mengapa harus memilih menggunakan Web API? Jika dilihat dari penjelasan di atas, sudah dapat dipahami apa saja kelebihan dan manfaat yang bisa didapatkan saat menggunakan Web API dalam pengembangan aplikasi.
+
+Berikut alasan mengapa memilih Web API:
+
+1. **Web API bersifat Open Source.**
+2. **Tidak membutuhkan SOAP:** Saat membutuhkan Web Service dan tidak perlu SOAP, maka ASP.NET Web API adalah solusi dan pilihan terbaik.
+3. **Mudah digunakan:** Web API dapat digunakan untuk membangun layanan HTTP sederhana, non-SOAP di atas WCF message pipeline.
+4. **Konfigurasi yang mudah:** Tidak seperti pada layanan WCF REST.
+5. **Pembuatan Service sederhana:** Pembuatan service dengan API Web cukup sederhana, berbeda dengan layanan WCF REST yang membuat pembuatan service menjadi sulit.
+6. **Berbasis HTTP:** Mudah untuk didefinisikan, mengekspos, dan mengonsumsi dengan cara RESTful.
+7. **Ringan dan efisien:** Berdasarkan arsitektur RESTful yang ringan dan bagus untuk perangkat dengan bandwidth terbatas seperti ponsel pintar.
+
+## Perbedaan antara REST API dan RESTful API
+
+Meskipun arsitektur REST dan RESTful API serupa, keduanya memiliki sedikit perbedaan:
+
+- **REST API:**
+  - Mengikuti semua aturan arsitektur REST.
+  - Memiliki sistem lapisan client-server, stateless, cacheable, dengan antarmuka yang seragam.
+  - Protokolnya kuat dan mewarisi banyak langkah keamanan sebagai lapisan arsitektur bawaan.
+- **RESTful API:**
+  - Memiliki semua fitur arsitektur REST dengan fitur tambahan yang unik.
+  - Multi-layer dan memiliki protokol transport yang membuat sistem kurang aman dibandingkan dengan REST.
+
+Saat menggunakan layanan web REST API, kerja URL didasarkan pada permintaan dan respons. Cara kerja RESTful sepenuhnya didasarkan pada aplikasi REST.
+
+REST API sangat mudah beradaptasi dan ramah pengguna untuk semua perusahaan bisnis dan IT yang menggunakannya. RESTful API, di sisi lain, terlalu fleksibel jika dibandingkan dengan layanan web RESTLESS.

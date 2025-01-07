@@ -84,7 +84,51 @@ Agar lebih memahami lingkungan kerja sekaligus cara pembuatan proyek Android, mu
 
 2. **Android Studio**  
    Unduh dari [Android Studio](https://developer.android.com/studio/index.html).
-
 3. **Android SDK**  
    Unduh dari [Android SDK](http://developer.android.com/sdk/index.html). Saat mendownload, jangan lupa pilih platform atau sistem operasi yang sesuai dengan milik Anda. Sistem operasi yang digunakan dalam panduan ini adalah **Windows**.
+
+
+# Praktikum 2: Layout
+
+**Layout** adalah cara untuk mengatur tata letak suatu komponen dalam pemrograman Android. Untuk mengatur antarmuka aplikasi Android, digunakan sebuah file XML. File XML tersebut digunakan untuk mengatur elemen seperti teks, tombol, dan komponen lainnya. File XML ini diletakkan pada direktori:
+
+```
+project_android -> res -> layout
+```
+
+## Jenis Layout
+Berikut adalah beberapa jenis layout yang dapat digunakan dalam pengembangan aplikasi Android:
+
+### 1. **Relative Layout**
+Relative Layout memungkinkan Anda mengatur posisi sebuah komponen terhadap komponen lainnya. Contoh:
+- Tombol **OK** berada di bawah **EditText**.
+- Tombol **Cancel** berada di sebelah kanan tombol **OK** dan di bawah **EditText**.
+
+Inti dari Relative Layout adalah saling berkaitannya posisi komponen satu dengan yang lain.
+
+### 2. **Linear Layout**
+Linear Layout memberikan tata letak komponen secara garis lurus, baik secara vertikal maupun horizontal. Contoh model orientasi Linear Layout:
+
+**Gambar 2.1: Linear Layout**
+
+### 3. **Table Layout**
+Table Layout memberikan tata letak komponen berdasarkan susunan tabel (baris dan kolom), mirip dengan struktur tabel pada HTML.
+
+**Gambar 2.2: Table Layout**
+
+### 4. **Frame Layout**
+Frame Layout memberikan tata letak komponen yang saling bertumpuk satu sama lain. Komponen yang ditambahkan akan ditempatkan di atas komponen sebelumnya.
+
+### 5. **Constraint Layout**
+Constraint Layout adalah salah satu komponen **ViewGroup** yang digunakan untuk menyusun tampilan aplikasi kompleks tanpa menggunakan nested layout. Keunggulannya adalah:
+- Dukungan kompatibilitas mulai dari Android 2.3 (API Level 9) hingga versi terbaru.
+
+**Gambar 2.4: Constraint Layout**
+
+### 6. **Scroll View**
+Scroll View digunakan untuk mengatasi masalah tampilan layar yang tidak cukup menampung banyak konten dalam satu layar. Dengan Scroll View, pengguna dapat menggulirkan layar untuk melihat konten tambahan.
+
+Scroll View sangat berguna untuk aplikasi dengan banyak konten dalam satu halaman.
+
+
 

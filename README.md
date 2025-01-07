@@ -243,4 +243,30 @@ Database adalah entitas yang mewakili basis data SQLite dalam aplikasi Anda. Ini
 ### Migrasi
 Room menyediakan mekanisme migrasi yang memungkinkan Anda memperbarui skema database tanpa kehilangan data yang ada.
 
+# PRAKTIKUM 5: RECYCLERVIEW
+
+RecyclerView adalah komponen antarmuka pengguna (UI) yang disediakan oleh Android untuk menampilkan daftar item dengan cara yang lebih fleksibel dan efisien daripada ListView. Ini adalah bagian dari Android Jetpack, yang merupakan kumpulan alat untuk membantu Anda membangun aplikasi Android yang lebih baik dan lebih mudah.
+
+Berikut adalah beberapa poin penting tentang RecyclerView:
+
+### a. View Recycling
+Salah satu fitur paling penting dari RecyclerView adalah kemampuannya untuk mendaur ulang tampilan (View Recycling). Ini berarti saat Anda menggulir melalui daftar, tampilan item yang tidak terlihat dihapus dari layar dan digunakan kembali untuk menampilkan item-item baru yang muncul.
+
+### b. LayoutManager
+RecyclerView memiliki konsep LayoutManager yang memungkinkan Anda untuk mengatur cara tampilan item ditampilkan di dalam RecyclerView. Anda dapat menggunakan **LinearLayoutManager** untuk membuat daftar linear vertikal atau horizontal, **GridLayoutManager** untuk tata letak kotak, atau **StaggeredGridLayoutManager** untuk tampilan kotak dengan ukuran berbeda.
+
+### c. Adapter
+Seperti ListView, RecyclerView juga menggunakan konsep adapter untuk menghubungkan data dengan tampilan. Anda perlu membuat kelas Adapter yang mewarisi **RecyclerView.Adapter**. Adapter ini bertanggung jawab untuk mengembalikan tampilan (ViewHolder) yang sesuai dan mengisi data ke dalam tampilan tersebut.
+
+### d. ViewHolder
+ViewHolder adalah komponen yang menyimpan referensi ke tampilan individu dalam daftar. Ini membantu dalam menghindari pemanggilan **findViewById** berulang-ulang, yang dapat merugikan kinerja aplikasi. Setiap item dalam RecyclerView memiliki ViewHolder yang berkorespondensi dengan tampilan item itu sendiri.
+
+### e. Listener dan Interaksi
+Anda dapat menambahkan pendengar klik atau interaksi lainnya pada tampilan item dalam ViewHolder. Ini memudahkan implementasi tindakan yang sesuai ketika pengguna berinteraksi dengan item dalam daftar.
+
+### f. Fleksibilitas dan Kustomisasi
+Dibandingkan dengan ListView, RecyclerView jauh lebih fleksibel dan memungkinkan Anda untuk mengatur tampilan dan perilaku item dengan lebih terperinci.
+
+Dalam keseluruhan, RecyclerView merupakan pilihan yang lebih disarankan saat Anda ingin menampilkan daftar item dalam aplikasi Android Anda, karena kemampuannya untuk mendaur ulang tampilan dan kinerja yang lebih baik.
+
 

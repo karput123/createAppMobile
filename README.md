@@ -430,3 +430,52 @@ Cloud Storage juga terintegrasi dengan Firebase Authentication untuk mengidentif
 5. **Membuat dan Membagikan URL Download (Opsional)**  
    Gunakan Firebase Admin SDK untuk membuat URL yang dapat dibagikan agar pengguna dapat mendownload objek.
 
+# Praktikum 10: Debugging
+
+## Apa itu Debugging?
+
+Debugging adalah proses mengidentifikasi dan menghapus bug atau error di dalam kode. Karena sistem pengkodean suatu program itu rumit dan kompleks, satu kesalahan kode dapat berpengaruh pada keseluruhan program. Bug bisa menyebabkan aplikasi atau perangkat lunak mengalami berbagai masalah seperti gagal login, gagal input data, fitur yang tidak berjalan, atau bahkan blue screen.
+
+Melakukan debugging adalah langkah wajib saat membangun aplikasi atau perangkat lunak. Selain mengatasi bug, proses ini juga memberikan beberapa manfaat lain, antara lain:
+
+- Error dapat terdeteksi lebih awal.
+- Proses perbaikan dapat dilakukan sedini mungkin.
+- Menghindari kesalahan desain program di masa mendatang.
+- Memberikan informasi tentang struktur data.
+- Membantu developer mengurangi informasi yang tidak berguna.
+- Mengurangi risiko hacker yang memanfaatkan celah bug atau error.
+- Developer dapat menghindari proses testing yang rumit, menghemat waktu dan energi.
+
+Debugging biasanya dilakukan oleh debugger, namun keahlian ini juga harus dimiliki oleh programmer atau full stack developer.
+
+## Tahapan Kerja Debugging
+
+Proses debugging terdiri dari beberapa tahapan yang perlu dilakukan dengan hati-hati:
+
+### 1. Mereproduksi Bug
+Tahap pertama dalam debugging adalah mendokumentasikan semua issue bug yang ada dengan benar. Tujuan dari tahap ini adalah untuk:
+- Menentukan skala prioritas penyelesaian bug.
+- Mengarahkan bug ke tim yang tepat.
+- Memetakan bug yang belum diselesaikan, siap diuji coba, dan lulus quality control.
+- Uji coba di berbagai perangkat dan browser untuk melihat apakah ada bug lain.
+
+Dengan mereproduksi bug, Anda mengetahui masalah yang harus diselesaikan dan dapat menunjuk tim terkait untuk melanjutkan ke tahap berikutnya.
+
+### 2. Mengidentifikasi Error
+Mengidentifikasi error adalah langkah berikutnya dalam debugging. Proses ini dilakukan dengan mengumpulkan laporan kesalahan program dan kemungkinan penyebabnya. Sebagai contoh, jika perintah pada perangkat lunak gagal dieksekusi, mungkin ada syntax bug pada skrip tersebut. Pastikan semua error diidentifikasi secara menyeluruh untuk mempercepat proses debugging.
+
+### 3. Menemukan Lokasi Bug
+Setelah mengetahui ada error, langkah berikutnya adalah menemukan lokasi bug di kode. Hal ini penting untuk mengetahui di baris mana kesalahan terjadi, yang dapat menyebabkan sistem tidak berjalan sebagaimana mestinya. Identifikasi bug sejak awal pengembangan perangkat lunak sangat penting untuk menghindari kendala lebih lanjut.
+
+### 4. Menganalisis Error
+Setelah mengetahui bug dan lokasinya, lakukan analisis untuk memahami penyebabnya. Teknik bottom-up dalam debugging dapat membantu untuk mengetahui bug lain yang terkait dan meminimalkan risiko error tambahan saat perbaikan dilakukan.
+
+### 5. Membuktikan Analisis Error
+Setelah analisis error dilakukan, pastikan bahwa tidak ada error lain yang akan muncul saat perbaikan dilakukan. Salah satu cara untuk membuktikan ini adalah dengan menulis tes otomatis pada lokasi bug menggunakan framework pengujian. Setelah uji skrip tidak menemukan error lain, lanjutkan ke tahap berikutnya.
+
+### 6. Lakukan Debugging pada Semua Error
+Bug yang ditemukan mungkin lebih dari satu, namun semua bug tersebut harus dapat diatasi dengan tuntas. Kumpulkan semua unit test yang perlu diperbaiki dan jalankan pengujian pada setiap kode yang diubah. Pastikan semuanya berjalan dengan baik di perangkat lunak atau program tersebut.
+
+### 7. Memperbaiki dan Validasi Skrip
+Setelah kode perbaikan disiapkan, masukkan semua kode yang telah diperbaiki ke dalam framework. Lakukan pengecekan berulang untuk memastikan semua skrip sudah sesuai dan program berjalan sebagaimana mestinya. Jika masih ada bug, jangan ragu untuk mengulang proses debugging dari awal.
+

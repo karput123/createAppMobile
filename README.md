@@ -387,3 +387,46 @@ Firebase Realtime Database adalah database yang di-host melalui cloud. Data disi
 
 ### 6. Firebase Hosting
 Firebase Hosting adalah layanan untuk hosting konten web. Dengan Firebase Hosting, Anda dapat menayangkan aplikasi web dan konten statis atau dinamis ke CDN global dengan cepat. Layanan ini mendukung pengiriman konten yang aman dan cepat, serta dapat menangani berbagai jenis konten seperti file HTML, CSS, dan API.
+
+# Praktikum 9: Firebase Storage
+
+## Apa itu Firebase Storage?
+
+Cloud Storage for Firebase adalah layanan penyimpanan objek yang andal, sederhana, dan hemat biaya, yang dirancang untuk skala Google. Layanan ini memungkinkan pengembang aplikasi untuk menyimpan dan menayangkan konten buatan pengguna seperti foto atau video. Firebase SDK untuk Cloud Storage memberikan keamanan Google pada proses upload dan download file, memastikan kualitas jaringan tidak menjadi masalah.
+
+## Kemampuan Utama Firebase Storage
+
+### 1. Operasi yang Stabil
+Firebase SDK untuk Cloud Storage memastikan bahwa proses upload dan download file tetap stabil, meskipun dalam kondisi jaringan yang buruk. Proses ini akan dilanjutkan dari posisi terakhir saat terhenti, yang menghemat waktu dan bandwidth pengguna.
+
+### 2. Keamanan yang Kuat
+Firebase SDK terintegrasi dengan Firebase Authentication untuk memberikan autentikasi yang mudah dan aman. Anda dapat menggunakan model keamanan deklaratif untuk mengizinkan akses file berdasarkan nama file, ukuran, jenis konten, dan metadata lainnya.
+
+### 3. Skalabilitas Tinggi
+Cloud Storage dirancang untuk skala exabyte, memungkinkan aplikasi Anda untuk berkembang dengan mudah dari prototipe ke tahap produksi tanpa perlu migrasi ke penyedia lain. Infrastruktur yang sama yang mendukung aplikasi besar seperti Spotify dan Google Foto mendukung Firebase Storage.
+
+## Cara Kerja Firebase Storage
+
+Firebase Storage memungkinkan pengembang untuk mengupload dan mendownload file langsung dari klien. Jika koneksi jaringan terganggu, operasi ini akan dilanjutkan dari posisi terakhir saat terhenti, menghemat waktu dan bandwidth.
+
+File disimpan di bucket Google Cloud Storage, yang mudah diakses melalui Firebase dan Google Cloud. Dengan begitu, Anda memiliki fleksibilitas untuk mengupload dan mendownload file dari aplikasi seluler menggunakan Firebase SDK. Selain itu, Anda dapat memproses file di sisi server, seperti pemfilteran gambar atau transcoding video, menggunakan Google Cloud Storage API.
+
+Cloud Storage juga terintegrasi dengan Firebase Authentication untuk mengidentifikasi pengguna dan memungkinkan kontrol akses yang lebih tepat, baik untuk file publik maupun pribadi.
+
+## Alur Implementasi Firebase Storage
+
+1. **Mengintegrasikan Firebase SDK untuk Cloud Storage**  
+   Sertakan Firebase SDK melalui Gradle, CocoaPods, atau script include untuk memulai integrasi.
+
+2. **Membuat Referensi**  
+   Referensikan jalur file (misalnya "images/mountains.png") untuk mengupload, mendownload, atau menghapusnya.
+
+3. **Mengupload atau Mendownload File**  
+   Upload atau download file ke jenis native dalam memori atau disk.
+
+4. **Mengamankan File**  
+   Gunakan Aturan Keamanan Firebase untuk Cloud Storage untuk mengamankan file Anda.
+
+5. **Membuat dan Membagikan URL Download (Opsional)**  
+   Gunakan Firebase Admin SDK untuk membuat URL yang dapat dibagikan agar pengguna dapat mendownload objek.
+

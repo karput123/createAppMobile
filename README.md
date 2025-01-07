@@ -217,3 +217,30 @@ startActivity(intent)
 
 
 
+# PRAKTIKUM 4: ROOM DATABASE
+
+Room Database adalah library dari Android Jetpack yang menyediakan cara lebih mudah untuk membuat, mengelola, dan berinteraksi dengan database SQLite pada aplikasi Android. Room menyediakan lapisan abstraksi di atas SQLite untuk menyederhanakan penggunaan database dalam proyek Android.
+
+Room Database adalah salah satu cara untuk menyimpan data secara lokal di aplikasi Android. Dalam konteks ini, penyimpanan lokal berarti data disimpan di perangkat pengguna, biasanya di dalam database SQLite, sehingga dapat diakses dan digunakan ketika aplikasi dijalankan, bahkan tanpa koneksi internet.
+
+## Pengertian dan Fitur Utama dari Room Database
+
+### Basis Data SQLite
+Room menggunakan SQLite sebagai basis data lokal untuk menyimpan data secara persisten dalam aplikasi Android.
+
+### Lapisan Abstraksi
+Room menyediakan lapisan abstraksi yang memungkinkan Anda berinteraksi dengan database menggunakan konsep objek daripada menggunakan kueri SQL mentah. Anda dapat mengakses database menggunakan metode yang didefinisikan di dalam DAO (Data Access Object) tanpa harus menulis kueri SQL secara langsung.
+
+### Entity
+Entity adalah representasi kelas Java yang mewakili tabel dalam database SQLite. Setiap entitas (Entity) biasanya memiliki atribut yang mewakili kolom dalam tabel.
+
+### DAO (Data Access Object)
+DAO adalah antarmuka yang berisi deklarasi metode untuk mengakses data dari database. Metode-metode ini dapat digunakan untuk mengambil, menyisipkan, memperbarui, atau menghapus entitas dari database.
+
+### Database
+Database adalah entitas yang mewakili basis data SQLite dalam aplikasi Anda. Ini biasanya merupakan kelas abstract yang mengextend `RoomDatabase`. Database menyediakan metode untuk mendapatkan instance DAO dan menginisialisasi database.
+
+### Migrasi
+Room menyediakan mekanisme migrasi yang memungkinkan Anda memperbarui skema database tanpa kehilangan data yang ada.
+
+

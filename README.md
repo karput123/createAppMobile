@@ -141,4 +141,79 @@ Bagian ini menjadi dasar untuk mengembangkan User Interface sebuah aplikasi. Jan
 scriptnya dahulu, karena kelihatanya banyak dan susah, namun sebenarnya sangat sederhana dan 
 mudah dimengerti. Semakin banyak Anda berlatih coding, semakin paham juga maksud programnya.
 
+# PRAKTIKUM 3: PENGENALAN WIDGET FORM
+
+**Basic Views** merupakan alat dasar yang digunakan untuk menampilkan sesuatu di dalam Android sesuai dengan kebutuhannya, umumnya seperti **TextView, EditText, Button, ImageButton, ImageView, Checkbox, ToggleButton, RadioButton, dan RadioGroup.**
+
+## a. Atribut
+Untuk menentukan bagaimana objek View akan ditampilkan di layar maka kita perlu menambahkan atribut pada objek View. Kita dapat menambahkan atribut pada tag XML.
+
+Contoh: Mengatur atribut panjang dan tinggi suatu View dapat kita tentukan dengan menuliskan kode di bawah:
+```xml
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+```
+
+## b. Identifier
+Kita menggunakan atribut `id` pada tag XML untuk memberikan identifier pada objek View kita. Id tersebut akan kita gunakan untuk mereferensikan objek tersebut. Gunakan atribut `id="@+id/namaId"` untuk menambahkan id pada objek View.
+
+## Penjelasan Basic Views
+
+1. **TextView**: Digunakan untuk menampilkan teks di layar.
+2. **EditText**: Merupakan subclass dari Views TextView, bedanya memungkinkan pengguna untuk mengedit isi teks.  
+   _Gambar 3.2 Tampilan EditText_
+3. **Button**: Mewakili sebuah widget tombol push.  
+   _Gambar 3.3 Tampilan Button_
+4. **ImageButton**: Mirip dengan tampilan Button, perbedaannya dapat menampilkan gambar sebagai tombol.  
+   _Gambar 3.4 Tampilan ImageButton_
+5. **CheckBox**: Berfungsi sebagai tipe khusus dari tombol yang memiliki dua keadaan yaitu checked atau unchecked.
+6. **ToggleButton**: Berfungsi untuk menampilkan keadaan checked atau unchecked menggunakan lampu indikator.  
+   _Gambar 3.6 Tampilan ToggleButton_
+7. **RadioButton**: Memiliki dua keadaan yaitu checked atau unchecked. Sekali sebuah RadioButton diberi checked, maka tidak dapat di-unchecked kembali. Sebuah **RadioGroup** digunakan untuk mengelompokkan satu atau lebih views RadioButton, dengan demikian mengizinkan hanya satu RadioButton yang akan di-checked dalam RadioGroup.  
+   _Gambar 3.7 Tampilan RadioButton_
+
+## c. View Binding
+View binding memungkinkan pengikatan langsung antara file layout XML dan kode Java/Kotlin tanpa perlu menggunakan `findViewById()`. Langkah-langkah penggunaannya meliputi mengaktifkan view binding di proyek Android Studio.
+
+## d. Intent
+**Intent** adalah mekanisme yang digunakan dalam platform Android untuk berkomunikasi antara komponen aplikasi, seperti **Activity, Service, BroadcastReceiver, dan ContentProvider.** Intent digunakan untuk memulai komponen baru, memulai layanan latar belakang, mengirim dan menerima pesan antar komponen, dan melakukan tugas lain yang melibatkan komunikasi antar komponen dalam aplikasi Android.
+
+### Intent dapat memiliki dua jenis:
+
+1. **Explicit Intent**: Berfungsi untuk mengaktifkan komponen-komponen dalam satu aplikasi yang sama. Misalnya, berpindah Activity.  
+   Explicit intents mendefinisikan suatu komponen yang harus dipanggil oleh sistem Android dengan menggunakan Java class sebagai identifier.
+
+2. **Implicit Intent**: Berfungsi untuk memanggil fungsi Activity yang sudah ada di fungsi internal Android seperti Dial Number, Open Browser, dan lainnya.  
+   Implicit intents meminta sistem untuk melakukan service tanpa memberitahu sistem kelas Java mana yang harus melakukan layanan ini. Dalam membangun sebuah implicit intents, Anda harus menentukan tindakan yang harus dilakukan dan opsional suatu URI yang harus digunakan untuk tindakan ini. Misalnya, Anda bisa mengatakan sistem yang ingin Anda lihat (tindakan) adalah sebuah halaman web (URI). Dengan memulai intent untuk ini data sistem akan mencoba untuk menemukan sebuah aplikasi yang terdaftar untuk acara ini, misalnya browser.
+
+### Hasil Intent:
+
+1. Explicit Intent
+2. Implicit Intent
+3. Mengirim data melalui Intent
+
+### Contoh Explicit Intent:
+Baris berikut menunjukkan bagaimana membuat sebuah explicit intent dan mengirimkan suatu variable ke sistem Android. Jika ada class yang merepresentasikan sebuah Activity Intents maka harus di-start oleh sistem Android.
+```kotlin
+val intent = Intent(this, ActivityTujuan::class.java)
+    .putExtra("KEY_VALUE1", "Value1")
+    .putExtra("KEY_VALUE2", "Value2")
+startActivity(intent)
+```
+Komponen yang menerima Intents dapat menggunakan metode `getIntent().getExtras()` untuk mendapatkan variable data yang dikirim.
+```kotlin
+val value1 = intent.getStringExtra("KEY_VALUE1")
+val value2 = intent.getStringExtra("KEY_VALUE2")
+```
+
+### Contoh Implicit Intent:
+Sedangkan implicit intents dikhususkan untuk sebuah aksi yang harus dilaksanakan dan terdapat data opsional dari aksi tersebut.
+```kotlin
+val intent = Intent(Intent.ACTION_VIEW).apply {
+    data = Uri.parse("https://www.google.com")
+}
+startActivity(intent)
+```
+
+
 

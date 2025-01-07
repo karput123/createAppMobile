@@ -115,7 +115,7 @@ lurus baik vertikal maupun horizontal**.
 ### 3. **Table Layout**
 Table Layout **memberikan tata letak** komponen **berdasarkan susunan tabel** (baris dan kolom), mirip dengan struktur tabel pada HTML.
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/1be8d2e5-e308-4ee7-9e1a-409b8a818b18)
 
 **Gambar 2.2: Table Layout**
 
@@ -269,4 +269,27 @@ Dibandingkan dengan ListView, RecyclerView jauh lebih fleksibel dan memungkinkan
 
 Dalam keseluruhan, RecyclerView merupakan pilihan yang lebih disarankan saat Anda ingin menampilkan daftar item dalam aplikasi Android Anda, karena kemampuannya untuk mendaur ulang tampilan dan kinerja yang lebih baik.
 
+
+# PRAKTIKUM 6: SERVICE
+
+Secara umum, **service** adalah Komponen Aplikasi Android yang bekerja di belakang layar, tanpa user interface dan interaksi dengan pengguna. Contohnya adalah ketika kita menggunakan Gmail yang tanpa kita buka aplikasinya bisa menotifikasi kalau ada email baru masuk. **Service** juga bisa dikatakan sebuah komponen aplikasi yang bisa melakukan operasi yang berjalan lama di latar belakang dan tidak menyediakan antarmuka pengguna. Komponen aplikasi lain bisa memulai layanan, dan komponen aplikasi tersebut akan terus berjalan di latar belakang walaupun pengguna beralih ke aplikasi lain. Selain itu, komponen bisa mengikat ke layanan untuk berinteraksi dengannya dan bahkan melakukan komunikasi antarproses (IPC). Misalnya, layanan mungkin menangani transaksi jaringan, memutar musik, melakukan file I/O, atau berinteraksi dengan penyedia materi dari latar belakang. Berikut adalah tiga tipe layanan yang berbeda:
+
+## Foreground
+Layanan latar depan melakukan beberapa operasi yang terlihat oleh pengguna. Misalnya, aplikasi audio akan menggunakan layanan latar depan untuk memutar track audio. Layanan latar depan harus menampilkan **Notifikasi**. Layanan latar depan terus berjalan bahkan saat pengguna tidak berinteraksi dengan aplikasi.
+
+## Background
+Layanan latar belakang melakukan operasi yang tidak terlihat secara langsung oleh pengguna. Misalnya, jika aplikasi menggunakan layanan untuk memadatkan penyimpanannya, aplikasi tersebut biasanya akan menjadi layanan latar belakang.
+
+## Bound
+Sebuah layanan akan **bound** bila komponen aplikasi mengikatkan kepadanya dengan memanggil `bindService()`. Layanan terikat menawarkan antarmuka klien-server yang memungkinkan komponen berinteraksi dengan layanan tersebut, mengirim permintaan, mendapatkan hasil, dan bahkan melakukannya pada sejumlah proses dengan komunikasi antarproses (IPC). Layanan terikat hanya berjalan selama komponen aplikasi terikat padanya. Beberapa komponen bisa diikat ke layanan sekaligus, namun bila semuanya telah dilepas, layanan akan dimusnahkan.
+
+Walaupun dokumentasi ini umumnya membahas layanan yang dimulai dan terikat secara terpisah, layanan Anda bisa bekerja dengan dua cara—layanan tersebut bisa dimulai (untuk berjalan terus-menerus) dan juga memungkinkan pengikatan. Ini hanyalah masalah apakah Anda mengimplementasikan beberapa metode callback: `onStartCommand()` untuk memungkinkan komponen memulainya dan `onBind()` untuk memungkinkan pengikatan.
+
+Apakah service sudah dimulai, bound, atau keduanya, semua komponen aplikasi bisa menggunakan **service** (bahkan dari aplikasi terpisah), demikian pula semua komponen bisa menggunakan suatu aktivitas—dengan memulainya dengan **Intent**. Akan tetapi, Anda bisa mendeklarasikan layanan sebagai privat pada file manifes, dan memblokir akses dari aplikasi lain. Hal ini dibahas selengkapnya di bagian tentang **Mendeklarasikan layanan dalam manifes**.
+
+Seperti aktivitas, **service** memiliki metode callback daur hidup yang bisa Anda implementasikan untuk memantau perubahan keadaan layanan dan melakukan pekerjaan pada waktu yang sesuai. Diagram berikut memperagakan setiap metode daur hidup:
+![image](https://github.com/user-attachments/assets/c6bd8965-8d95-4174-8108-61b3a5f2bcc7)
+
+
+**Gambar 1. Daur hidup layanan.** Diagram di sebelah kiri menampilkan daur hidup bila layanan dibuat dengan `startService()` dan diagram di sebelah kanan menampilkan daur hidup bila layanan dibuat dengan `bindService()`. 
 

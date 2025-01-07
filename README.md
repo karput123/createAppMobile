@@ -349,3 +349,41 @@ Meskipun arsitektur REST dan RESTful API serupa, keduanya memiliki sedikit perbe
 Saat menggunakan layanan web REST API, kerja URL didasarkan pada permintaan dan respons. Cara kerja RESTful sepenuhnya didasarkan pada aplikasi REST.
 
 REST API sangat mudah beradaptasi dan ramah pengguna untuk semua perusahaan bisnis dan IT yang menggunakannya. RESTful API, di sisi lain, terlalu fleksibel jika dibandingkan dengan layanan web RESTLESS.
+
+# Praktikum 8: Firebase Realtime Database
+
+## Apa itu Firebase?
+
+Firebase adalah layanan dari Google yang mempermudah pengembangan aplikasi dengan menyediakan solusi Backend as a Service (BaaS). Dengan menggunakan Firebase, pengembang aplikasi dapat fokus pada pengembangan fitur aplikasi tanpa perlu khawatir mengelola backend. 
+
+Firebase pertama kali didirikan pada tahun 2011 oleh Andrew Lee dan James Tamplin, dengan produk pertama yang dirilis adalah Realtime Database. Layanan ini digunakan untuk menyimpan data yang dapat disinkronkan dengan banyak pengguna secara real-time. Pada bulan Oktober 2014, Firebase diakuisisi oleh Google.
+
+Firebase menawarkan dua jenis layanan:
+- **SPARK**: Layanan gratis dengan batasan tertentu.
+- **BLAZE**: Layanan berbayar berdasarkan penggunaan.
+
+## Jenis atau Fitur Firebase
+
+### 1. Firebase Analytics
+Firebase Analytics adalah fitur yang digunakan untuk mengumpulkan data dan laporan untuk aplikasi Android maupun iOS. Dengan fitur ini, Anda dapat membuat laporan berdasarkan lokasi pengguna, bagian aplikasi yang paling banyak digunakan, atau perilaku transaksi pengguna.
+
+Fitur ini memungkinkan pembuatan segmentasi pengguna berdasarkan atribut pengguna (user attribute) untuk melaporkan dan mengirim notifikasi yang lebih terfokus.
+
+### 2. Firebase Cloud Messaging and Notifications
+Firebase Cloud Messaging (FCM) menyediakan layanan pengiriman pesan dan notifikasi antar perangkat dengan koneksi yang handal dan efisien. FCM memungkinkan pengembang untuk mengirim pesan yang ditargetkan kepada pengguna berdasarkan demografi atau perilaku pengguna, tanpa biaya tambahan.
+
+FCM juga terintegrasi dengan Google Analytics for Firebase, memungkinkan pelacakan interaksi dan konversi dari satu dashboard tanpa perlu menulis kode tambahan.
+
+### 3. Firebase Authentication
+Firebase Authentication adalah layanan untuk mengautentikasi pengguna ke aplikasi menggunakan berbagai metode autentikasi seperti nomor telepon, kata sandi, atau penyedia identitas populer seperti Google dan Facebook. Layanan ini terintegrasi dengan berbagai layanan Firebase lainnya dan memanfaatkan standar industri seperti OAuth 2.0 dan OpenID Connect.
+
+### 4. Firebase Cloud Firestore
+Cloud Firestore adalah database fleksibel dan terukur yang digunakan untuk pengembangan aplikasi seluler, web, dan server di Firebase dan Google Cloud Platform. Mirip dengan Firebase Realtime Database, Cloud Firestore memungkinkan aplikasi untuk tetap responsif bahkan saat offline dan menyinkronkan data secara real-time.
+
+Cloud Firestore adalah database NoSQL yang dihosting di cloud dan dapat diakses melalui SDK real-time untuk aplikasi iOS, Android, dan web.
+
+### 5. Firebase Realtime Database
+Firebase Realtime Database adalah database yang di-host melalui cloud. Data disimpan dalam format JSON dan disinkronkan secara real-time ke setiap pengguna yang terhubung. Realtime Database memungkinkan aplikasi untuk tetap responsif bahkan saat offline, dengan data disimpan sementara di perangkat pengguna dan disinkronkan kembali saat perangkat online.
+
+### 6. Firebase Hosting
+Firebase Hosting adalah layanan untuk hosting konten web. Dengan Firebase Hosting, Anda dapat menayangkan aplikasi web dan konten statis atau dinamis ke CDN global dengan cepat. Layanan ini mendukung pengiriman konten yang aman dan cepat, serta dapat menangani berbagai jenis konten seperti file HTML, CSS, dan API.

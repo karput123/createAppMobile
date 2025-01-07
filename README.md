@@ -103,32 +103,42 @@ Berikut adalah beberapa jenis layout yang dapat digunakan dalam pengembangan apl
 Relative Layout memungkinkan Anda mengatur posisi sebuah komponen terhadap komponen lainnya. Contoh:
 - Tombol **OK** berada di bawah **EditText**.
 - Tombol **Cancel** berada di sebelah kanan tombol **OK** dan di bawah **EditText**.
-
 Inti dari Relative Layout adalah saling berkaitannya posisi komponen satu dengan yang lain.
 
 ### 2. **Linear Layout**
-Linear Layout memberikan tata letak komponen secara garis lurus, baik secara vertikal maupun horizontal. Contoh model orientasi Linear Layout:
+Linear Layout merupakan layout yang **memberikan susunan tata letak** komponen secara **garis 
+lurus baik vertikal maupun horizontal**. 
 
-**Gambar 2.1: Linear Layout**
+![image](https://github.com/user-attachments/assets/2d3598fd-3eb7-4b81-85b2-05e0dba5ecc6)
+
 
 ### 3. **Table Layout**
-Table Layout memberikan tata letak komponen berdasarkan susunan tabel (baris dan kolom), mirip dengan struktur tabel pada HTML.
+Table Layout **memberikan tata letak** komponen **berdasarkan susunan tabel** (baris dan kolom), mirip dengan struktur tabel pada HTML.
+
+![Uploading image.png…]()
 
 **Gambar 2.2: Table Layout**
 
 ### 4. **Frame Layout**
-Frame Layout memberikan tata letak komponen yang saling bertumpuk satu sama lain. Komponen yang ditambahkan akan ditempatkan di atas komponen sebelumnya.
+Frame Layout **memberikan tata letak** komponen yang **saling bertumpuk satu sama lain**. Komponen yang ditambahkan akan ditempatkan di atas komponen sebelumnya.
 
 ### 5. **Constraint Layout**
-Constraint Layout adalah salah satu komponen **ViewGroup** yang digunakan untuk menyusun tampilan aplikasi kompleks tanpa menggunakan nested layout. Keunggulannya adalah:
-- Dukungan kompatibilitas mulai dari Android 2.3 (API Level 9) hingga versi terbaru.
+Constraint Layout adalah salah satu komponen **ViewGroup** yang digunakan untuk menyusun **tampilan aplikasi kompleks tanpa menggunakan nested layout**. ConstraintLayout tersedia dengan dukungan kompatibilitas mulai dari Android 2.3 (API Level 9) sampai dengan yang terbaru. 
 
 **Gambar 2.4: Constraint Layout**
 
 ### 6. **Scroll View**
-Scroll View digunakan untuk mengatasi masalah tampilan layar yang tidak cukup menampung banyak konten dalam satu layar. Dengan Scroll View, pengguna dapat menggulirkan layar untuk melihat konten tambahan.
+Dalam pengembangan aplikasi android biasanya sering terkendala dengan ukuran tampilan layar. 
+Konten yang ingin dimasukkan cukup banyak sehingga layar tidak dapat menampilkannya dalam 
+satu layar. ScrollView digunakan untuk mengatasi masalah tersebut. Pasti sudah tidak asing lagikan 
+dengan Scroll View ini? 
 
-Scroll View sangat berguna untuk aplikasi dengan banyak konten dalam satu halaman.
-
+### 7. **Kombinasi Layout**
+Beberapa layout yang telah dijelaskan sebelumnya juga dapat dikombinasikan. Kombinasi layout 
+tersebut bertujuan agar antarmuka yang dibangun menjadi lebih bagus dan sesuai dengan 
+keinginan. Kombinasi layout dapat dipilih sesuai dengan kebutuhan antarmuka. 
+Bagian ini menjadi dasar untuk mengembangkan User Interface sebuah aplikasi. Jangan pedulikan 
+scriptnya dahulu, karena kelihatanya banyak dan susah, namun sebenarnya sangat sederhana dan 
+mudah dimengerti. Semakin banyak Anda berlatih coding, semakin paham juga maksud programnya.
 
 
